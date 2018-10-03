@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.kotani.eosaccounts.MainActivity">
+
+<TextView
+    android:id="@+id/info"
+    android:layout_width="360dp"
+    android:layout_height="303dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="13dp"
+    android:layout_marginLeft="13dp"
+    android:layout_marginTop="191dp" />
+
+<EditText
+    android:id="@+id/account_name"
+    android:layout_width="337dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="18dp"
+    android:layout_marginLeft="18dp"
+    android:layout_marginTop="47dp"
+    android:ems="10"
+    android:hint="Account Name"
+    android:inputType="textPersonName" />
+
+<Button
+    android:id="@+id/get_account"
+    android:layout_width="187dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="27dp"
+    android:layout_marginLeft="27dp"
+    android:layout_marginTop="115dp"
+    android:text="Find" />
+
+<Button
+    android:id="@+id/server_info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/account_name"
+    android:layout_alignRight="@+id/account_name"
+    android:layout_alignTop="@+id/get_account"
+    android:text="Server Info" />
+</RelativeLayout>
