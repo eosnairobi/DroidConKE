@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kotani.eosaccounts.Api.Api;
 
@@ -81,11 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 catch (Exception e)
                 {
                     e.printStackTrace();
-                    try {
-                        info.setText("Error Occurred" + e.getMessage() + '\n' + rawResponse.body().string());
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
+                    Toast.makeText(getApplicationContext(),"Ummm... Sticks and Stones, friend. Try Again.", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -93,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call<ResponseBody> call, Throwable throwable)
             {
                 info.setText(throwable.getMessage());
+                Toast.makeText(getApplicationContext(),"Your Mental is Flawed. A Psycho in commom-man settings. Try Again.", Toast.LENGTH_SHORT).show();
             }
         });
 
