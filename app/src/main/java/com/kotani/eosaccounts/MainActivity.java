@@ -27,7 +27,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 
 public class MainActivity extends AppCompatActivity {
-
+// TODO - Clean up this code!
     TextView info;
 
     @Override
@@ -111,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<String> call, Response<String> response) {
                 if (response.isSuccessful()) {
                     String responseString = response.body();
-                    // todo: do something with the response string
                     info.setText(responseString);
                 }
             }
