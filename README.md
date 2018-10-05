@@ -1,5 +1,12 @@
 # DroidConKE
-Source code for the DroidConKE 
+
+Source code for the DroidConKE
+
+What we will end up with
+
+<p >
+	<img src="./images/screenshot.png" width="269.5" height="460.75"/>
+</p>
 
 ## Step 1
 
@@ -17,29 +24,26 @@ Converter-scalars -> Displays the response from the server as a string
 // Retrofit
 
 implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-implementation 'com.squareup.retrofit2:converter-gson:2.2.0' 
+implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
 ```
 
 ## Step 3
 
-Add internet permissions in the AndroidManifest.xml  (just after the manifest file)
-
+Add internet permissions in the AndroidManifest.xml (just after the manifest file)
 
 ```
     <uses-permission android:name="android.permission.INTERNET" />
-
 ```
 
 ## Step 4
 
-We need to create a package called api and an java class called Api 
+We need to create a package called api and an java class called Api
 
 ```
     -com.example.peter.droidconpractice
     ---api(package)
     -----Api(java class)
-
 ```
 
 ## Step 5
@@ -73,8 +77,8 @@ public interface Api {
     Call<ResponseBody> getAccount(@Body RequestBody params);
 
 }
-
 ```
+
 ## Step 6
 
 We create the layout for our application. A title, a text field for entering account names, a button, when clicked fetches all information about a given account and a text field to present the output.
@@ -121,7 +125,6 @@ We create the layout for our application. A title, a text field for entering acc
             />
 
     </LinearLayout>
-
 ```
 
 ## Step 7
@@ -153,6 +156,7 @@ TextView info;
         });
     }
 ```
+
 Ensure you have this imports from Retrofit
 
 ```
@@ -214,14 +218,12 @@ private void getAccount(String account_name){
         });
 
     }
-
 ```
 
-In short  we are trying to do this
+In short we are trying to do this
 
 ```
 curl --request POST   --url http://mainnet.eosnairobi.io/v1/chain/get_account   --data '{"account_name":"kisusyaww121"}'
-
 ```
 
 To get this output
@@ -302,7 +304,6 @@ To get this output
 
 We get then get the response displayed on the mobile app
 
-
 ## NB
 
 Depending on the type of data you are fetching from the blockchain, the other requests one can make are:
@@ -348,11 +349,7 @@ In this case, observables are used in the requests
 
     @POST("/v1/history/get_transactions")
     Observable<JsonObject> getTransactions( @Body JsonObject body);
-
 ```
-
-
-
 
 ## References
 
